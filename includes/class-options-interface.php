@@ -121,6 +121,11 @@ class Options_Framework_Interface {
 				$output .= '<input id="' . esc_attr( $value['id'] ) . '" class="of-input" name="' . esc_attr( $option_name . '[' . $value['id'] . ']' ) . '" type="text" value="' . esc_attr( $val ) . '" />';
 				break;
 
+			// Basic readonly input
+			case 'readonly':
+				$output .= '<input class="of-input" type="text" value="' . get_option($value['id']) . '" readonly />';
+				break;
+
 			// Password input
 			case 'password':
 				$output .= '<input id="' . esc_attr( $value['id'] ) . '" class="of-input" name="' . esc_attr( $option_name . '[' . $value['id'] . ']' ) . '" type="password" value="' . esc_attr( $val ) . '" />';

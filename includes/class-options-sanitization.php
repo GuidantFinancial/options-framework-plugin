@@ -15,6 +15,13 @@
 add_filter( 'of_sanitize_text', 'sanitize_text_field' );
 
 /**
+ * Sanitization for text input
+ *
+ * @link http://developer.wordpress.org/reference/functions/sanitize_text_field/
+ */
+add_filter( 'of_sanitize_readonly', 'sanitize_text_field' );
+
+/**
  * Sanitization for password input
  *
  * @link http://developer.wordpress.org/reference/functions/sanitize_text_field/
